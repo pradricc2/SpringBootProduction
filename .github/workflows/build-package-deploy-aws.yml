@@ -46,8 +46,8 @@ jobs:
         with:
           aws_access_key: ${{secrets.AWS_ACCESS_KEY_ID}}
           aws_secret_key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
-          application_name: SpringBootProdApp
-          environment_name: Springbootprodapp-env
+          application_name: SpringBootProdWebApp
+          environment_name: Springbootprodwebapp-env
           version_label: SpringBootProdApp-${{steps.time.outputs.time}}
           region: us-east-1
-          deployment_package: build/libs/SpringBootProdApplication-0.0.1-SNAPSHOT.jar
+          deployment_package: build/libs/SpringBootProdApplication.war
