@@ -41,7 +41,8 @@ jobs:
           name: "Artifact-${{steps.time.outputs.time}}"
           path: build/libs
           retention-days: 5
-      - uses: vitr/actions-build-and-upload-to-ecs@master
+      - name: Deploy from AWS ECR
+        uses: vitr/actions-build-and-upload-to-ecs@master
         with:
             access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
             secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
