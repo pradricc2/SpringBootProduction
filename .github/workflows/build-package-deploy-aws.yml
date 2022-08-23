@@ -44,9 +44,9 @@ jobs:
       - name: Deploy from AWS ECR
         uses: vitr/actions-build-and-upload-to-ecs@master
         with:
-            access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-            secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            account_id: ${{ secrets.AWS_ACCOUNT_ID }}
+            access_key_id: ${{secrets.AWS_ACCESS_KEY_ID}}
+            secret_access_key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+            account_id: ${{secrets.AWS_ACCOUNT_ID}}
             repo: docker/springboot-docker-image
             region: us-east-1
             tags: latest,${{ github.sha }}
